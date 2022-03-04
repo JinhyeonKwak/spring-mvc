@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "frontControllerServiceV2", urlPatterns = "/front-controller/v2/*")
+@WebServlet(name = "frontControllerServiceV3", urlPatterns = "/front-controller/v3/*")
 public class FrontControllerServiceV3 extends HttpServlet {
 
     private Map<String, ControllerV3> controllerMap = new HashMap<>();
@@ -52,7 +52,7 @@ public class FrontControllerServiceV3 extends HttpServlet {
     }
 
     private MyView viewResolver(String viewName) {
-        return new MyView("WEB-INF/views/" + viewName + ".jsp");
+        return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
 
 
